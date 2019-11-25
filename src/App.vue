@@ -1,16 +1,17 @@
 <template>
     <div id="app">
-        <v-todo></v-todo>
+        <v-home></v-home>
     </div>
 </template>
 
 <script>
-    import Todo from './components/Todo.vue'
+
+    import Home from "@/components/Home";
 
     export default {
         name: 'app',
         components: {
-            "v-todo": Todo
+            "v-home": Home
         }
     }
 
