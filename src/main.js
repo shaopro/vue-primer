@@ -1,14 +1,11 @@
 import Vue from 'vue';
 import App from './App.vue';
 import VueRouter from 'vue-router';
-
-
-Vue.config.productionTip = false;
-Vue.use(VueRouter);
-
 import Home from "@/components/Home";
 import News from "@/components/News";
 
+Vue.config.productionTip = false;
+Vue.use(VueRouter);
 
 const routes = [
     {path: "*", redirect: "Home"},
@@ -24,3 +21,7 @@ new Vue({
     render: h => h(App),
     router,
 }).$mount('#app');
+
+
+
+

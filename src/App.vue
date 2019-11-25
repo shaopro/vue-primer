@@ -1,18 +1,19 @@
 <template>
     <div id="app">
-        <br>
-        <router-link to="/home">home</router-link>
-        <br>
-        <router-link to="/news">news</router-link>
-        <hr>
-        <router-view></router-view>
+        <v-home></v-home>
+        <v-news></v-news>
     </div>
 </template>
 
 <script>
-
+    import Home from './components/Home.vue'
+    import News from './components/News.vue'
     export default {
         name: 'app',
+        components: {
+            "v-home": Home,
+            "v-news": News
+        }
     }
 
 </script>

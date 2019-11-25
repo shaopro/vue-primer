@@ -5,9 +5,13 @@
 </template>
 
 <script>
+    import VueEvent from "../../model/VueEvent";
+
     export default {
         name: 'News',
-
+        mounted() {
+            VueEvent.$on("to-news", data => window.console.log(data));
+        }
     }
 </script>
 
