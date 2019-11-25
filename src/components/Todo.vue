@@ -1,32 +1,15 @@
 <template>
     <div class="home">
-        <P>Todo组件</P>
-        <br>
-        <label>
-            <input type="text" v-model="content">
-        </label>
-        <button @click="add()">新增</button>
-        <br>
-        <hr>
 
-        <p>正在进行</p>
-        <ul v-for="(one,index) in list" :key="index">
-            <li v-if="!one.checked">
-                <input type="checkbox" v-model="one.checked">
-                {{one.content}}
-                <button @click="remove(index)">删除</button>
-            </li>
-        </ul>
-        <hr>
 
-        <p>已经完成</p>
-        <ul v-for="(one,index) in list" :key="index">
-            <li v-if="one.checked">
-                <input type="checkbox" v-model="one.checked">
-                {{one.content}}
-                <button @click="remove(index)">删除</button>
+        <p :title="content">Content</p>
+        <ol>
+            <li v-for="(data,index) in list" :key="index" :class="{red:index===1,blue:index===2}">
+                {{index}} ------ {{data}}
             </li>
-        </ul>
+
+
+        </ol>
 
 
     </div>
@@ -38,10 +21,11 @@
         name: 'Home',
         data() {
             return {
-                content: "",
+                content: "停留显示",
                 list: [
                     {checked: false, content: "1111"},
                     {checked: false, content: "2222"},
+                    {checked: false, content: "3333"},
                 ]
             }
         },
@@ -56,6 +40,15 @@
         }
     }
 </script>
+<style scoped>
+    .red {
+        color: red;
+    }
+
+    .blue {
+        color: blue;
+    }
+</style>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <!--<style scoped>-->
