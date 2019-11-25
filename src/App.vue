@@ -1,18 +1,16 @@
 <template>
     <div id="app">
-        <v-home></v-home>
-        <v-news></v-news>
+        <v-todo></v-todo>
     </div>
 </template>
 
 <script>
-    import Home from './components/Home.vue'
-    import News from './components/News.vue'
+    import Todo from './components/Todo.vue'
+
     export default {
         name: 'app',
         components: {
-            "v-home": Home,
-            "v-news": News
+            "v-todo": Todo
         }
     }
 
